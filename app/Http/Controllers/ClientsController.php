@@ -8,13 +8,16 @@ use Illuminate\Support\Facades\Hash;
 
 class ClientsController extends Controller
 {
+    public function index(){
+        return view("clients.form");
+    }
+    
     public function store(Request $request)
     {
         // Validate the incoming data
         $validated = $request->validate([
             'name' => 'required|string|max:255',
             'last_name' => 'required|string|max:255',
-            'ID' => 'required|integer|unique:clients,ID',
             'password' => 'required|string|min:8',
         ]);
 

@@ -11,7 +11,7 @@ class Client extends Model
 
     // Allow mass assignment for these fields
     protected $fillable = [
-        'name', 'last_name', 'ID', 'password',
+        'name', 'last_name', 'password',
     ];
 
     // Optional: If you want to specify that password should always be hidden from JSON responses
